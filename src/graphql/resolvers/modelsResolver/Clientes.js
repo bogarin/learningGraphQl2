@@ -1,4 +1,4 @@
-import { clientes } from "../../data";
+import { clientes } from "../../../data";
 
 const getClientes = () => {
   return clientes;

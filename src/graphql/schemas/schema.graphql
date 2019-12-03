@@ -1,0 +1,8 @@
+import schemaCliente from "./schemaCliente";
+import schemaPedido from "./schemaPedido";
+import schemaEmail from "./schemaEmail";
+module.exports = {
+  schemaCliente,
+  schemaPedido,
+  schemaEmail
+};

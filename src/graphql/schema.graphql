@@ -1,7 +1,3 @@
-import { descCliente } from "./../descripciones";
-
-export default `
-"""${descCliente.typeCliente}"""
 type Cliente{
     id:ID
     nombre:String
@@ -12,19 +8,17 @@ type Cliente{
     tipo:TipoCliente
     pedidos: [Pedido]
 }
-type Query{
-    """${descCliente.getClientes}"""
+
+type Query{  
    getClientes:[Cliente]
-   """${descCliente.getCliente}"""
    getCliente(input:Int):Cliente
 }
 
-"""${descCliente.TipoCliente}"""
 enum TipoCliente{
     BASICO
     PREMIUM
-}
-"""${descCliente.ClienteInput}"""
+
+
 input ClienteInput{
     nombre:String!
     apellido:String
@@ -36,10 +30,6 @@ input ClienteInput{
 }
 
 type Mutation{
-    """ ${descCliente.crearCliente}"""
-    #resolve crearCliente,
-    #entrada eschema ClienteINput
-    #salida eschema de tipo Cliente
    crearCliente(input:ClienteInput):Cliente
 }
-`;
+
