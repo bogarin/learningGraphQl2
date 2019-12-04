@@ -8,7 +8,7 @@ export const resolvers = {
       return models.Clientes.getCliente(input);
     }
   },
-  Mutstion: {
+  Mutation: {
     crearCliente: ({ input }) => {
       return models.Clientes.newCliente(input);
     }
